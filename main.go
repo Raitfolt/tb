@@ -3,14 +3,16 @@ package main
 import (
 	"flag"
 	"log"
+
+	"github.com/Raitfolt/tb/clients/telegram"
+)
+
+const (
+	tgBotHost = "api.telegram.org"
 )
 
 func main() {
-	token := mustToken()
-
-	// token = flags.Get(token)
-
-	// tgClient = telegram.New(token)
+	tgClient := telegram.New(tgBotHost, mustToken())
 
 	// fetcher = fetcher.New(tgClient)
 
