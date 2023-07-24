@@ -8,7 +8,7 @@ import (
 	"path"
 	"strconv"
 
-	e "github.com/Raitfolt/tb/lib"
+	"github.com/Raitfolt/tb/lib/e"
 )
 
 type Client struct {

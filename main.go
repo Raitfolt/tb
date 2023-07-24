@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 
 	"github.com/Raitfolt/tb/clients/telegram"
@@ -13,6 +14,8 @@ const (
 
 func main() {
 	tgClient := telegram.New(tgBotHost, mustToken())
+
+	fmt.Println(tgClient)
 
 	// fetcher = fetcher.New(tgClient)
 
