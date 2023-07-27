@@ -5,6 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 
+	_ "github.com/mattn/go-sqlite3"
+
 	"github.com/Raitfolt/tb/storage"
 )
 
@@ -61,9 +63,7 @@ func (s *Storage) Remove(ctx context.Context, page *storage.Page) error {
 
 	return nil
 }
-
-// IsExists checks if page exists in storage.
-func (s *Storage) IsExists(ctx context.Context, page *storage.Page) (bool, error) {
+func (s *Storage) IsExist(ctx context.Context, page *storage.Page) (bool, error) {
 	q := `SELECT COUNT(*) FROM pages WHERE url = ? AND user_name = ?`
 
 	var count int
