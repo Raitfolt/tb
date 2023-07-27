@@ -43,7 +43,7 @@ func main() {
 
 func mustToken() string {
 	token := flag.String(
-		"tg-bot-token",
+		"token",
 		"",
 		"token for access to telegram bot",
 	)
